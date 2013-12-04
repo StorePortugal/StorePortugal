@@ -1,7 +1,1 @@
-<html>
-<head>
-	<title>StorePortugal</title>
-</head>
-<body>
-</body>
-</html>
+<?php header('location: pages/index.php'); ?>
