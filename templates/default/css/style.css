@@ -1,20 +1,21 @@
 body{
-	background:#111;
-	color: #fff;
-	font-family: Calibri, sans-serif;
+	background:#eee;
+	color:#111;
+	font-family:Calibri, sans-serif;
 	margin:0px;
 	padding:0px;
 }
 
 a, a:visited, a:active{
 	text-decoration: none;
+	color:#111;
 }
 
 .title{
 	border:0px solid red;
 	font-size:20pt;
 	font-weight:normal;
-	color:#fff;
+	color:#333;
 	margin:25px 0px 5px 0px;
 	padding:3px 0px;
 	border-bottom:1px solid rgba(255,255,255,0.3);
@@ -23,9 +24,20 @@ a, a:visited, a:active{
 #mainDiv{
 	border:0px solid red;
 	min-width: 800px;
-	width:100%;
+	max-width:1024px;
 	margin: 0px auto;
 	padding:0px;
+}
+
+#mainTable{
+	width:100%;
+	vertical-align:top;
+	margin:10px 0px;
+}
+
+#mainTable td{
+	background:#fff;
+	border-radius:3px;
 }
 
 #logo{
@@ -38,24 +50,19 @@ a, a:visited, a:active{
 }
 
 #menu a{	
-	color:#fff;
+	color:#111;
 }
 
 #menu{
 	border:0px solid green;
 	list-style:none;
-	height:50px;
-	margin:0px auto;
-    width: -webkit-fit-content;
 	padding:0px;
 }
 
 #menu li, #menu a li{
-	border-right:1px solid rgba(255,255,255,0.3);
 	list-style:none;
 	margin:0px;
-	padding:15px 40px;
-	float:left;
+	padding:5px 20px;
 	transition:all 0.3s;
 	cursor:pointer;
 }
@@ -69,11 +76,7 @@ a, a:visited, a:active{
 	border:0px solid lightblue;
 	background:#eee;
 	color:#222;
-	position:absolute;
-	margin:15px -40px;
-	padding:5px 20px;
 	visibility:hidden;
-	opacity:0;
 	transition:all 0.3s;
 }
 

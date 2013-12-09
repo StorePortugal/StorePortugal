@@ -11,25 +11,31 @@
 
 <body>
 	<div id="mainDiv">
-		<div id="logo">
-			Store Portugal
-		</div>
+	<table id="mainTable" cellspacing="3px">
+		<tr>
+		 <td colspan="3">
+			<div id="logo">
+			</div>
+		 </td>
+		</tr>
 		
-		<nav id="navMenu">
-		 <ol id="menu">
-		 	<a href="index.php"><li>Home</li></a>
-		 	<a href="downloads.php"><li>Downloads</li></a>
-		 	<li>Docs
-		 		<ol>
-		 			<li>Tutorials</li>
-		 			<li>Manual and guide</li>
-		 			<li style="border-bottom:0px solid #fff;">API</li>
-		 		</ol>
-		 	</li>
-		 	<li>About</li>
-		 	<li style="border-right:0px solid #fff;">Contacts</li>
-		 </ol>
-		</nav>
-		
-		<div id="pages">
-			<!-- page display -->
+		<tr>
+		 <td style="width:200px;">
+			 <ol id="menu">
+				<a href="index.php"><li>Home</li></a>
+				<a href="downloads.php"><li>Downloads</li></a>
+				<li>Docs
+					<ol>
+						<li>Tutorials</li>
+						<li>Manual and guide</li>
+						<li style="border-bottom:0px solid #fff;">API</li>
+					</ol>
+				</li>
+				<li>About</li>
+				<li style="border-right:0px solid #fff;">Contacts</li>
+			 </ol>
+		 </td>
+			
+		 <td>
+			<div id="pages">
+				<!-- page display -->
