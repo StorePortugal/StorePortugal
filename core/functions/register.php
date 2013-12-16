@@ -1,7 +1,5 @@
 <?php
-include '../core/init.php';
 loggedInLockPage();
-include '../templates/getTop.php';
 
 if (empty($_POST) === false) {
 	$required = array('username', 'password', 'repeatPassword', 'firstName', 'email');
@@ -47,12 +45,9 @@ if (empty($_POST) === false) {
 	};
 ?>
 
-<h4 style="color:rgb(200,50,50)">
 <?php
 	if (isset($_GET['success']) && empty($_GET['success'])) {
-		echo '<h3 style="color:rgb(50,150,50)"> You have been succefully registered! </h3>
-			  <a href="index.php" class="defaultBtn" style="color:#fff;">Go to home</a>
-			  ';
+		echo '<h3 style="color:rgb(50,150,50)"> You have been succefully registered! </h3>';
 	} else {
 	if (empty($_POST) === false && empty($errors) === true) {
 		$registerData = array(
@@ -64,34 +59,10 @@ if (empty($_POST) === false) {
 		);
 		
 		registerUser($registerData);
-		header('location: register.php?success');
+		header('location: ../../index.php?success');
 		exit();
 		
 	} else if (empty($errors) === false) {
 		echo outputErrors($errors);
 	}
-	?>
-	</h4>
-
-	<form action="" method="post">
-		<p/><input name="username" class="registerInputText" type="text" placeholder="Username" required/>
-
-		<p/><input name="password" class="registerInputText" type="password" placeholder="Password" required/>
-
-		<p/><input name="repeatPassword" class="registerInputText" type="password" placeholder="Repeat Password" required/>
-
-		<p/><input name="firstName" class="registerInputText" type="text" placeholder="First Name" required/>
-
-		<p/><input name="lastName" class="registerInputText" type="text" placeholder="Last Name" />
-
-		<p/><input name="email" class="registerInputText" type="email" placeholder="Email" required/>
-
-
-		<p/><input type="checkbox" required/> Li e aceito, bla bla bla, nobody cares, #YOLO#SWAG !
-
-		<p/><input type="submit" value="Submit" action="" class="defaultBtn" style="font-weight:bold; font-size:11pt; margin:2px 10px;"/>
-	</form>
-
-<?php
-}
-include '../templates/getBot.php'; ?>
+}?>

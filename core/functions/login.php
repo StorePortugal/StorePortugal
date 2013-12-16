@@ -1,7 +1,7 @@
 <?php
-include '../core/init.php';
+include '../init.php';
 loggedInLockPage();
-if (empty($_POST) == true) {header('location: index.php');}
+if (empty($_POST) == true) {header('location: ../../pages/index.php');}
 
 if (empty($_POST) == false) {
 	$username = $_POST['username'];
@@ -19,25 +19,13 @@ if (empty($_POST) == false) {
 		$errors[] = 'Activate your account first!';
 		} else {
 			$_SESSION['userId'] = $login;
-			header('location: index.php');
+			header('location: ../../pages/index.php');
 			exit();
 		}
 	}
 } else {
 	$errors = "Enter a Username and Password!";
 }
-
-	include '../templates/getTop.php';
-	echo '<center>';
-	
-	echo '<h4 style="color:rgb(200,50,50); margin:0px;">';
 	outputErrors($errors);
-	echo '</h4>';
-	
-	include "../templates/" . $activeTemplate['name'] . "/includes/overall/widgets/login.php";
-	
-	
-	echo '</center>';
-	include "../templates/" . $activeTemplate['name'] . "/includes/overall/footerNoSidebar.php";
 	
 ?>
